@@ -2,8 +2,8 @@
 // File: pages/mint.vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAccount, useConnect, useChainId } from '@wagmi/vue'
-import { zksyncSepoliaTestnet } from '@wagmi/vue/chains'
+import { useAccount, useConnect, useChainId } from '@alpha/vue'
+import { zksyncSepoliaTestnet } from '@alpha/vue/chains'
 
 // State management
 const isLoading = ref(false)
@@ -139,7 +139,7 @@ const mintNFT = async () => {
 
 // File: composables/useNFTContract.ts
 import { createPublicClient, createWalletClient, http } from 'viem'
-import { zksyncSepoliaTestnet } from '@wagmi/core/chains'
+import { zksyncSepoliaTestnet } from '@alpha/core/chains'
 
 export async function useNFTContract(contractAddress: `0x${string}`) {
   const publicClient = createPublicClient({
